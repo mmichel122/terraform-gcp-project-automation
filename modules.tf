@@ -1,5 +1,5 @@
 module "project" {
-    source = "./project"
+    source = "./modules/project"
     project_name = var.project_name
     billing_account = var.billing_account
     org_id = var.org_id
@@ -7,7 +7,7 @@ module "project" {
 }
 
 module "network" {
-    source = "./network"
+    source = "./modules/network"
     network_name   = var.network_name
     cidr_block     = var.cidr_block
     ssh_source_ips = var.ssh_source_ips 
